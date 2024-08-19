@@ -1,0 +1,35 @@
+:root {
+    --brand-color: #2196F3;
+  }
+  
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: "Roboto", sans-serif;
+    color: #757575;
+}
+h2, h3, h4{
+    color: #212121;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    font-style: normal;
+}
+  
+.container{
+    width: 1200px;
+    padding: 0 15px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
