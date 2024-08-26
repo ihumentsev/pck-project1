@@ -12,8 +12,9 @@ body{
     font-family: "Roboto", sans-serif;
     color: #757575;
 }
-h2, h3, h4{
+h1, h2, h3, h4{
     color: #212121;
+    margin: 0;
 }
 
 ul{
@@ -32,4 +33,111 @@ a {
     margin-left: auto;
     margin-right: auto;
 
+}
+
+/* header */
+header{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    border-bottom: solid 1px #ECECEC;
+}
+.header-wraper{
+    display: flex;
+    align-items: center;
+}
+
+.header-nav{
+    margin-left: 90px;
+}
+.nav-list{
+    display: flex;
+}
+.nav-items{
+    margin-left: 50px;
+    color: #212121;
+
+}
+.nav-items:hover{
+   color: var(--brand-color);
+
+}
+.nav-items:first-child{
+    margin: 0;
+}
+
+.nav-link{
+    color: inherit;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.28px;
+    padding: 10px 0;
+}
+
+.header-adress{
+    margin-left: auto;
+}
+
+.adress-link{
+    display: inline-block;
+    color: #757575;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.28px;
+}
+.adress-link.tel{
+    margin-left: 50px;
+}
+.adress-link:hover{
+    color: var(--brand-color);
+}
+
+/* hero-section */
+.hero-section{
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ), url(./images/Hero.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1600px;
+    height: 600px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin: 0 auto;
+   align-items: center;
+    
+}
+.hero-title{
+    color: #FFF;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 60px; /* 136.364% */
+    letter-spacing: 2.64px;
+    text-transform: uppercase;
+    max-width: 700px;
+    text-align: center;
+}
+.hero-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 32px;
+    color: #FFF;
+   font-family: Roboto;
+    font-size: 16px;
+   font-weight: 700;
+   line-height: 30px; /* 187.5% */
+   letter-spacing: 0.96px;
+   border-radius: 4px;
+   background-color: var(--brand-color);
+   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);  
+   margin-top: 30px;
+   border: none;
 }
