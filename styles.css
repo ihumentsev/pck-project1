@@ -223,3 +223,11 @@ line-height: normal;
 letter-spacing: 0.42px;
 text-transform: uppercase;
 }
+.item-image{
+    display: block;
+}
+
+/* section Team */
+.team-section{
+    
+}
