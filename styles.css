@@ -34,10 +34,19 @@ a {
 }
 
 .container {
-  width: 1200px;
+  width: 100%;
   padding: 0 15px;
   margin-left: auto;
   margin-right: auto;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
 
 /* header */
@@ -52,8 +61,21 @@ header {
   align-items: center;
 }
 
+.header-wraper img{
+  width: 134px;
+  @media screen and (min-width: 1200px) {
+    width: 145px;
+  }
+}
 .header-nav {
-  margin-left: 90px;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: 85px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 90px;
+  }
 }
 .nav-list {
   display: flex;
@@ -81,6 +103,15 @@ header {
 
 .header-adress {
   margin-left: auto;
+  display: none;
+  
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .adress-link {
@@ -93,10 +124,28 @@ header {
   letter-spacing: 0.28px;
 }
 .adress-link.tel {
-  margin-left: 50px;
+  margin-left: 0;
+  @media screen and (min-width: 1200px) {
+    margin-left: 50px;
+  }
 }
 .adress-link:hover {
   color: var(--brand-color);
+}
+
+.mobile-btn{
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: #FFF;
+  margin-left: auto;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+.mobile-btn_icon{
+  width: 100%;
+  height: 100%;
 }
 
 /* hero-section */
@@ -105,33 +154,57 @@ header {
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(./images/Hero.png);
+    url(./images/Hero-mobile.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 1600px;
-  height: 600px;
+  width: 100%px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
   align-items: center;
+
+  @media screen and (min-width:768px) {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(./images/hero-tablet.png);
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(./images/Hero.png);
+    width: 1600px;
+    height: 600px;
+  }
 }
 .hero-title {
   color: #fff;
-  font-size: 44px;
+  font-size: 26px;
   font-weight: 900;
   line-height: 60px; /* 136.364% */
-  letter-spacing: 2.64px;
   text-transform: uppercase;
-  max-width: 700px;
   text-align: center;
+  @media screen and (min-width: 480px) {
+    max-width: 360px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 44px;
+    max-width: 700px;
+    letter-spacing: 2.64px;
+  }
 }
 .hero-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 32px;
+  padding: 10px 24px;
   color: #fff;
   font-family: Roboto;
   font-size: 16px;
@@ -143,22 +216,40 @@ header {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   margin-top: 30px;
   border: none;
+  @media screen and (min-width: 1200px) {
+    padding: 10px 32px;
+  }
 }
 
 /* Benefits section */
 .benefits-section {
-  padding-top: 90px;
+  padding: 60px 0;
+  @media screen and (min-width: 1200px) {
+    padding: 90px 0;
+  }
 }
 .benefits-title {
   display: none;
 }
 .benefits-list {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+  gap: 30px;
+  flex-wrap: wrap;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .benefits-items {
-  width: 270px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .benefit-items_thumb {
@@ -177,6 +268,10 @@ header {
   letter-spacing: 0.42px;
   text-transform: uppercase;
   margin-top: 30px;
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    text-align: start;
+  }
 }
 
 .benefit-items_text {
@@ -184,12 +279,17 @@ header {
   font-weight: 400;
   line-height: 24px; /* 171.429% */
   letter-spacing: 0.42px;
-  margin-top: 10px;
+  margin:10px 0 0 0;
+  
 }
 
 /* about section */
 .about-section {
+  display: none;
   padding: 90px 0;
+  @media screen and (min-width: 1200px) {
+    display: block;
+  }
 }
 .about-title {
   text-align: center;
@@ -245,18 +345,28 @@ header {
 
 .team-list {
   display: flex;
+  flex-direction: column;
   margin-top: 50px;
-  justify-content: space-between;
-  
+  flex-wrap: wrap;
+  gap: 30px;
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .team-item {
-  width: 270px;
+  width: 100%;
   border-radius: 0px 0px 4px 4px;
   background-color: #fff;
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
   padding-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
 }
 
 .team-item img {
@@ -334,8 +444,13 @@ letter-spacing: 1.08px;
 
 .clients-list{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
     margin-top: 50px;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+    }
 }
 
 .clients-item{
