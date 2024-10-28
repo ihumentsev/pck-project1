@@ -25,14 +25,14 @@
 
         <nav class="header-nav">
           <ul class="nav-list">
-            <li class="nav-items">
+            <li class="nav-items active">
               <a class="nav-link" href="./index.html">Студія</a>
             </li>
             <li class="nav-items">
-              <a class="nav-link" href="#">Портфоліо</a>
+              <a class="nav-link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li class="nav-items">
-              <a class="nav-link" href="#">Контакти</a>
+              <a class="nav-link" href="#foter-contact">Контакти</a>
             </li>
           </ul>
         </nav>
@@ -40,21 +40,118 @@
           <a class="adress-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
           <a class="adress-link tel" href="tel:+380961111111">+38 096 111 11 11</a>
         </address>
-        <button class="mobile-btn">
+        <button class="mobile-btn" data-open-modal>
           <svg class="mobile-btn_icon">
             <use href="./images/icons/sprite.svg#icon-mobile-btn"></use>
           </svg>
         </button>
+        <div class="mobile-menu" data-menu>
+          <svg width="20" height="20" class="close-menu_btn" data-modal-close>
+            <use href="./images/icons/sprite.svg#close-mobile-btn"></use>
+          </svg>
+          <nav class="mobile-nav_wraper">
+            <ul class="mobile-menu_list">
+              <li class="mobile-item active" data-link>
+                <a href="./">Студія</a>
+              </li>
+              <li class="mobile-item" data-link>
+                <a href="./portfolio.html">Портфоліо</a>
+              </li>
+              <li class="mobile-item" data-link>
+                <a href="#footer">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="mobile-address_wraper">
+            <a class="mobile-link_phone" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
+            <a class="mobile-link_email" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </address>
+          <ul class="mobile-social_list">
+            <li class="mobile-social_item">
+              <a href="#">Instagram</a>
+            </li>
+            <li class="mobile-social_item">
+              <a href="#">Twitter</a>
+            </li>
+            <li class="mobile-social_item"><a href="#">Facebook</a></li>
+            <li class="mobile-social_item"><a href="#">LinkedIn</a></li>
+          </ul>
+        </div>
         
       </div>
     </div>
   </header>
+   <!-- backdrop -->
+   <div class="backdrop is-hidden" data-backdrop>
+    <div class="modal" data-modal>
+      <svg width="20" height="20" class="close-menu_btn" data-close>
+        <use href="./images/icons/sprite.svg#close-mobile-btn"></use>
+      </svg>
+      <h2 class="modal-form_title">Залиште свої дані, ми вам передзвонимо</h2>
+      <form class="modal-form" data-form>
+        <label for="name">Ім'я</label >
+          <div class="modal-input_wraper">
+            <input type="text" name="name" id="name" placeholder="Татьяна" class="backdrop-input"/>
+        <svg width="20" height="20" class="input-icon">
+          <use href="./images/icons/sprite.svg#icon-person-black"></use>
+        </svg>
+          </div>
+        
+        <label for="phone">Телефон</label>
+        <div class="modal-input_wraper">
+          <input
+          class="backdrop-input"
+          type="tel"
+          name="phone"
+          id="phone"
+          placeholder="+3807568954"
+         
+        />
+        <svg width="20" height="20" class="input-icon">
+          <use href="./images/icons/sprite.svg#icon-phone-black"></use>
+        </svg>
+        </div>
+        
+        <label for="email">Пошта</label>
+        <div class="modal-input_wraper">
+          <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="email@gmail.com"
+          class="backdrop-input"
+         
+        />
+        <svg width="20" height="20" class="input-icon">
+          <use href="./images/icons/sprite.svg#icon-email-black"></use>
+        </svg>
+        </div>
+        
+        <label for="coment">Коментар</label>
+        <textarea name="coment" id="coment" placeholder="Введіть текст"></textarea>
+        <div class="form-check">
+          <input type="checkbox" name="agree" class="input-check"/>
+          <p>Погоджуюся з розсилкою та приймаю>
+          <a href="./docs/4029f946-d3f6-4207-ba90-927654aee18d.pdf" download>Умови договору </a>
+          </p>
+        </div>
+        <div class="wraper-btn">
+          <button class="hero-btn --form" > Відправити</button>
+        </div>
+        
+      </form>
+    </div>
+  </div>
   <main>
 
     <!-- section HERO -->
     <section class="hero-section">
       <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-      <button class="hero-btn">Замовити послугу</button>
+      <button class="hero-btn" data-open type="button">Замовити послугу</button>
     </section>
     <!-- section Benefits -->
     <section class="benefits-section">
@@ -353,7 +450,7 @@
       </div>
     </section>
   </main>
-  <footer class="section-footer">
+  <footer class="section-footer" id="foter-contact">
     <div class="container">
       <div class="content-wraper">
         <div class="adress-wraper">
@@ -418,6 +515,9 @@
 
 
   </footer>
+  <script src="./js/mobile-menu.js"></script>
+  <script src="./js/modal.js"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
 
 </html>
